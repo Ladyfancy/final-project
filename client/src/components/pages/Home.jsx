@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+// import { video } from '.../slow_motion_pouring_water'
 
 export default class Home extends Component {
   render() {
     return (
-      <div className="Home">
-        <h2>Home</h2>
-        <p>This is a sample project with the MERN stack</p>
+      <div>
+        <div className="Home"></div>
       </div>
     )
   }

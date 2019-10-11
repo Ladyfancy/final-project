@@ -72,13 +72,26 @@ export default {
       .catch(errHandler)
   },
 
-  addCountry(body) {
+  addMindfulness(body) {
     return service
-      .post('/countries', body)
+      .post('/add-mindfulness', body)
       .then(res => res.data)
       .catch(errHandler)
   },
 
+  getCategories() {
+    return service
+      .get('/categories')
+      .then(res => res.data)
+      .catch(errHandler)
+  },
+
+  addCategory(body) {
+    return service
+      .post('/categories', body)
+      .then(res => res.data)
+      .catch(errHandler)
+  },
   getSecret() {
     return service
       .get('/secret')
