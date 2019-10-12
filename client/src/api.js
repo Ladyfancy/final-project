@@ -79,6 +79,13 @@ export default {
       .catch(errHandler)
   },
 
+  getMindfulness() {
+    return service
+      .get('/mindfulness')
+      .then(res => res.data)
+      .catch(errHandler)
+  },
+  
   getCategories() {
     return service
       .get('/categories')

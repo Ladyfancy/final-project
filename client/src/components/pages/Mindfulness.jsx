@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import api from '../../api'
-
 import prompts from '../../prompts.json'
 
 export default class Mindfulness extends Component {
@@ -19,13 +18,14 @@ export default class Mindfulness extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     })
+    console.log(this.state)
   }
 
   handleClick(e) {
     e.preventDefault()
     console.log(this.state.prompt, this.state.description)
     let data = {
-      prompt: this.state.prompt,
+      prompt: this.state.chosenPrompt,
       description: this.state.description,
     }
     api

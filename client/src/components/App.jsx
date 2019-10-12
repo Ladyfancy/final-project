@@ -6,6 +6,7 @@ import AddCountry from './pages/AddCountry'
 import AddCategory from './pages/AddCategory'
 import Affirmations from './pages/Affirmations'
 import Mindfulness from './pages/Mindfulness'
+import MyJournal from './pages/MyJournal'
 
 import Categories from './pages/Categories'
 import Secret from './pages/Secret'
@@ -37,7 +38,6 @@ export default class App extends Component {
           <header className="App-header">
             <h1>
               <img src={logo} /> Mindfulness App
-          
             </h1>
 
             <NavLink to="/" exact>
@@ -46,7 +46,7 @@ export default class App extends Component {
             <NavLink to="/categories">Vision Board</NavLink>
             <NavLink to="/affirmations">Affirmations</NavLink>
             <NavLink to="/mindfulness">Mindfulness</NavLink>
-
+            <NavLink to="/myjournal">Journal</NavLink>
             {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
             {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
             {api.isLoggedIn() && (
@@ -56,6 +56,13 @@ export default class App extends Component {
             )}
             {/* <NavLink to="/secret">Secret</NavLink> */}
           </header>
+          {/* <video
+            src={video}
+            style={{ display: 'hidden' }}
+            autoPlay
+            loop
+            alt="video"
+          /> */}
 
           <Switch>
             <Route path="/" exact component={Home} />
@@ -65,9 +72,11 @@ export default class App extends Component {
             <Route path="/affirmations" component={Affirmations} />
             <Route path="/add-country" component={AddCountry} />
             <Route path="/mindfulness" component={Mindfulness} />
+            <Route path="/myjournal" component={MyJournal} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/secret" component={Secret} />
+
             <Route render={() => <h2>404 Sorry Try Another Page</h2>} />
           </Switch>
         </div>
