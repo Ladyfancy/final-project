@@ -12,9 +12,10 @@ import Categories from './pages/Categories'
 import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import EditCategories from './pages/EditCategories'
 import api from '../api'
 import logo from '../ihlogo.png'
-import video from '../Water Drop-H264 75.mov'
+import video from '../slow_motion_pouring_water.mp4'
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -44,9 +45,11 @@ export default class App extends Component {
               Home
             </NavLink>
             <NavLink to="/categories">Vision Board</NavLink>
+            <NavLink to="/editcategories">Edit Vision Board</NavLink>
+            <NavLink to="/add-category">Add Category</NavLink>
             <NavLink to="/affirmations">Affirmations</NavLink>
             <NavLink to="/mindfulness">Mindfulness</NavLink>
-            <NavLink to="/myjournal">Journal</NavLink>
+            <NavLink to="/myjournal">Your Journal</NavLink>
             {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
             {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
             {api.isLoggedIn() && (
@@ -68,6 +71,7 @@ export default class App extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/countries" component={Countries} />
             <Route path="/categories" component={Categories} />
+            <Route exact path="/editcategories" component={EditCategories} />
             <Route path="/add-category" component={AddCategory} />
             <Route path="/affirmations" component={Affirmations} />
             <Route path="/add-country" component={AddCountry} />

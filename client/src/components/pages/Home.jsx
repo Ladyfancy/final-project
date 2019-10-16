@@ -5,11 +5,16 @@ import Calendar from './Calendar'
 export default class Home extends Component {
   render() {
     return (
-      <div>
-        <div className="Home">
-          <Calendar />
-        </div>
-      </div>
+      <div className = "home-text"> 
+       
+       <h1><div>Vision</div> Meets Reality</h1>
+       
+      <br></br>
+        
+       
+        <button onClick={e => this.handleClick(e)}>Start Here</button>
+      </div> 
+      
     )
   }
 }

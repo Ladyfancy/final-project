@@ -20,6 +20,8 @@ export default class Categories extends Component {
             <br></br>
             <div>{eachCategory.description}</div>
             <br></br>
+            <button>Edit</button>
+            <button>Delete</button>
           </li>
         ))}
         
