@@ -108,7 +108,7 @@ export default class App extends Component {
     <Card.Img variant="bottom" src="ihlogo.png" />
   </Card>
 </div> */}
-      </div>
+     </div>
     )
   }
 }
