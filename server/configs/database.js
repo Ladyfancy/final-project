@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
 
 // Don't forget to set "MONGODB_URI" in ~/server/.env
-const uri =
-  // process.env.MONGODB_URI ||
-  `mongodb://localhost/final-project`
+const uri = process.env.MONGODB_URI || `mongodb://localhost/final-project`
 
 mongoose
   .connect(uri, { useNewUrlParser: true })

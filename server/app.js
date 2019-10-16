@@ -26,12 +26,13 @@ app.use(nocache())
 app.use(
   cors({
     origin: (origin, cb) => {
-      cb(null, origin && origin.startsWith('http://localhost:'))
+      cb(null, true)
     },
     optionsSuccessStatus: 200,
     credentials: true,
   })
 )
+
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -57,7 +58,6 @@ app.use('/api', require('./routes/auth'))
 app.use('/api/countries', require('./routes/countries'))
 app.use('/api/categories', require('./routes/categories'))
 app.use('/api/mindfulness', require('./routes/mindfulness'))
-
 
 // For any routes that starts with "/api", catch 404 and forward to error handler
 app.use('/api/*', (req, res, next) => {

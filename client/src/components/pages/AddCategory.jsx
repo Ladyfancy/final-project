@@ -29,7 +29,7 @@ export default class AddCategory extends Component {
       description: this.state.description,
     }
     api
-      .AddCategory(data)
+      .addCategory(data)
       .then(result => {
         console.log('SUCCESS!')
         this.setState({
