@@ -15,7 +15,7 @@ import Signup from './pages/Signup'
 import EditCategories from './pages/EditCategories'
 import api from '../api'
 import logo from '../ihlogo.png'
-import video from '../slow_motion_pouring_water.mp4'
+import video from '../Water Drop-H264 75.mov'
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -37,9 +37,10 @@ export default class App extends Component {
 
         <div className="App">
           <header className="App-header">
-            <h1>
-              <img src={logo} /> Mindfulness App
+            <h1 padding = "0" >
+              <img height="200px" src={logo} /> 
             </h1>
+            
 
             <NavLink to="/" exact>
               Home
@@ -57,7 +58,7 @@ export default class App extends Component {
                 Logout
               </Link>
             )}
-            {/* <NavLink to="/secret">Secret</NavLink> */}
+            <NavLink to="/secret">Events</NavLink>
           </header>
           {/* <video
             src={video}

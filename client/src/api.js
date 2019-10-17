@@ -85,7 +85,7 @@ export default {
       .then(res => res.data)
       .catch(errHandler)
   },
-  
+
   getCategories() {
     return service
       .get('/categories')
@@ -93,6 +93,19 @@ export default {
       .catch(errHandler)
   },
 
+  deleteCategories() {
+    return service
+      .get('/categories/delete/:id')
+      .then(res => res.data)
+      .catch(errHandler)
+  },
+
+  testCategories(id) {
+    return service
+      .get('/categories/test')
+      .then(res => res.data)
+      .catch(errHandler)
+  },
   addCategory(body) {
     return service
       .post('/categories', body)

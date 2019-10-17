@@ -12,7 +12,7 @@ export default class Secret extends Component {
   render() {
     return (
       <div className="Secret">
-        <h2>Secret</h2>
+        <h2>Events</h2>
 
         <div className="result">{this.state.secret}</div>
 

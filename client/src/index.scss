@@ -7,11 +7,41 @@
 
 body {
   margin: 0;
-  // font-family: $font;
+
+  color: #566f7a;
+  font-family: freight-sans-pro, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color:  white;
+}
+
+p { color: black;
+  font-size: 20px;
+  font-size-adjust: inherit;
+
+}
+
+h1 {font-size: 40px;
+  font-size-adjust: inherit;
+
+
+}
+
+button {
+  color: #fff;
+  background-color: #566f7a;
+  border-color: #566f7a;
+  padding: 15px;
+  border-radius: 11px;
+  margin-top: 15px;
+  }
 .home-text {
   color: #32c3ff;
 
@@ -79,6 +109,7 @@ body {
 // --------------------
 // Style for App component
 
+
 .Topline {
   margin: auto;
 }
@@ -97,7 +128,7 @@ body {
 
   .App-header {
     background-color: $primary;
-    padding: 20px;
+    padding: 10px;
     color: #32c3ff;
 
     a {
@@ -167,7 +198,7 @@ nav .btn {
   vertical-align: middle;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  cursor: pointer;
+  cursor: hand;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -404,12 +435,6 @@ footer {
   /* width: 200px; */
 }
 
-// video {
-//   width: 100vw;
-//   //height: 100%;
-//   object-fit: cover;
-
-// }
 .parent-element-to-video {
   position: fixed;
   width: 100%;
@@ -417,6 +442,7 @@ footer {
   overflow: hidden;
   position: relative; /* or absolute or fixed */
 }
+
 video {
   z-index: -1;
   height: 100%;
@@ -427,4 +453,8 @@ video {
   left: 50%; /* % of surrounding element */
   top: 50%;
   transform: translate(-50%, -50%); /* % of current element */
+}
+
+.home-text {
+  background: white;
 }

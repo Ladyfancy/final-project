@@ -6,7 +6,14 @@ import App from './components/App.jsx'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios'
-axios.defaults.withCredentials = false
+console.log(process.env)
+
+if (process.env.NODE_ENV === 'production') {
+  axios.defaults.withCredentials = false
+} else {
+  axios.defaults.withCredentials = false
+}
+console.log(axios.defaults.withCredentials)
 
 ReactDOM.render(
   <Router>
