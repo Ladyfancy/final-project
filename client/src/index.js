@@ -6,7 +6,7 @@ import App from './components/App.jsx'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios'
-axios.defaults.withCredentials = true
+axios.defaults.withCredentials = false
 
 ReactDOM.render(
   <Router>
