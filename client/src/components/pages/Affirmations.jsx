@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import api from '../../api'
 
 import affirmations from '../../affirmations.json'
+import dogs from '../../dogs.json'
+
 import axios from 'axios'
 
 export default class Affirmations extends Component {
@@ -9,12 +11,14 @@ export default class Affirmations extends Component {
     img: '',
     chosenAffirmations: '',
     affirmation: [],
+    dog: [],
+    chosenDog: '',
   }
 
   componentDidMount() {
     //When page loads
     this.chooseAffirmation()
-    this.newDog()
+    this.chooseDog()
   }
 
   chooseAffirmation = () => {
@@ -25,31 +29,38 @@ export default class Affirmations extends Component {
     })
   }
 
-  newDog = () => {
-    axios
-      .get('https://api.thedogapi.com/v1/images/search?size=full')
-      .then(result => {
-        console.log(result.data[0].url)
-        this.setState({
-          img: result.data[0].url,
-        })
-      })
+  chooseDog = () => {
+    let chosenDog = dogs[Math.floor(Math.random() * dogs.length)]
+    this.setState({
+      chosenDog,
+    })
   }
+
+  // newDog = () => {
+  //   axios.get(process.env.DOG).then(result => {
+  //     console.log(result.data[0].url)
+  //     this.setState({
+  //       img: result.data[0].url,
+  //     })
+  //   })
+  // }
 
   handleClick(e) {
     //When I click button
     e.preventDefault()
     this.chooseAffirmation()
-    this.newDog()
+    this.chooseDog()
   }
 
   render() {
+    console.log(process.env.DOG)
     console.log(this.state)
     return (
       <div className="Affirmation">
         <h2>Positive Affirmation</h2>
 
         <div>{this.state.chosenAffirmations.affirmation}</div>
+        <img src={this.state.chosenDog.image} style={{ height: '300px' }} />
 
         <form>
           <img

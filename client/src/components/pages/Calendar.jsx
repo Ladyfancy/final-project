@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import moment from 'moment'
 
 import { Calendar, momentLocalizer } from 'react-big-calendar'
+
 // a localizer for { Calendar}
 import { getEvents } from '../gcal'
 
@@ -28,7 +29,7 @@ export default class Cal extends React.Component {
       // React Components in JSX look like HTML tags
       <Calendar
         localizer={localizer}
-        style={{ height: '420px' }}
+        style={{ height: '420px', width: '80%' }}
         events={this.state.events}
       />
     )

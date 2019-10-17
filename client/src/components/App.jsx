@@ -58,7 +58,7 @@ export default class App extends Component {
                 Logout
               </Link>
             )}
-            <NavLink to="/secret">Events</NavLink>
+            <NavLink to="/secret">Profile</NavLink>
           </header>
           {/* <video
             src={video}

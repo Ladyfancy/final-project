@@ -5,8 +5,8 @@ const Mindfulness = require('../models/Mindfulness') //This is our database.  fi
 
 router.get('/secret', isLoggedIn, (req, res, next) => {
   res.json({
-    secret: 42,
-    user: req.user,
+    secret: 'You are amazing, You are capable, You will finish Ironhack.',
+    user: req.user.username,
   })
 })
 

@@ -45,7 +45,7 @@ export default class Categories extends Component {
           <li key={i}>
             <div>{eachCategory.name}</div>
             <br></br>
-            <div>{eachCategory.image}</div>
+            <img src={eachCategory.image} />
             <br></br>
             <div>{eachCategory.description}</div>
             <br></br>

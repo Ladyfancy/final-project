@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import api from '../../api'
+// import Calendar from './Calendar'
 
 export default class Secret extends Component {
   constructor(props) {
     super(props)
     this.state = {
       secret: null,
+      user: null,
       message: null,
     }
   }
   render() {
     return (
       <div className="Secret">
-        <h2>Events</h2>
+        <h2>{this.state.user}'s Profile</h2>
+
 
         <div className="result">{this.state.secret}</div>
 
@@ -25,7 +28,12 @@ export default class Secret extends Component {
   componentDidMount() {
     api
       .getSecret()
-      .then(data => this.setState({ secret: data.secret }))
+      .then(data =>
+        this.setState({
+          secret: data.secret,
+          user: data.user,
+        })
+      )
       .catch(err => this.setState({ message: err.toString() }))
   }
 }
