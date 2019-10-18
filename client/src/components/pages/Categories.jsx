@@ -51,8 +51,16 @@ export default class Categories extends Component {
             <br></br>
             {/* <button>Edit</button> */}
             <button onClick={this.deleteCategory}>Delete</button>
+          
           </li>
-        ))}
+
+
+
+        ))} <div>
+
+
+
+        </div>
       </div>
     )
   }

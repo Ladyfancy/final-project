@@ -16,6 +16,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul { list-style-type: none;
+
+}
+
+li {list-style-type: none;
+
+}
 a {
   text-decoration: none;
   font-size: 20px;
@@ -34,6 +41,9 @@ h1 {font-size: 40px;
 
 }
 
+.secret {
+  color:  #566f7a;
+}
 button {
   color: #fff;
   background-color: #566f7a;
@@ -174,7 +184,7 @@ body {
 .Secret {
   .result {
     font-size: 1.2em;
-    color: $primary;
+    color: black;
   }
 }
 

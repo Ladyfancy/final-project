@@ -63,7 +63,7 @@ export default class AddCountry extends Component {
           <br />
           Capitals:{' '}
           <input
-            type="text"
+            type="file"
             value={this.state.capitals}
             name="capitals"
             onChange={this.handleInputChange}

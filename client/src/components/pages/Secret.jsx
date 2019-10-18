@@ -13,11 +13,11 @@ export default class Secret extends Component {
   }
   render() {
     return (
-      <div className="Secret">
+      <div className="Secret" color= " #566f7a;">
         <h2>{this.state.user}'s Profile</h2>
 
 
-        <div className="result">{this.state.secret}</div>
+        <div className="result" color= " #566f7a;">{this.state.secret}</div>
 
         {this.state.message && (
           <div className="info info-danger">{this.state.message}</div>

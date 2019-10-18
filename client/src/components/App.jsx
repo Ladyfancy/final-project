@@ -46,7 +46,7 @@ export default class App extends Component {
               Home
             </NavLink>
             <NavLink to="/categories">Vision Board</NavLink>
-            <NavLink to="/editcategories">Edit Vision Board</NavLink>
+            {/* <NavLink to="/editcategories">Edit Vision Board</NavLink> */}
             <NavLink to="/add-category">Add Category</NavLink>
             <NavLink to="/affirmations">Affirmations</NavLink>
             <NavLink to="/mindfulness">Mindfulness</NavLink>
@@ -72,7 +72,7 @@ export default class App extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/countries" component={Countries} />
             <Route path="/categories" component={Categories} />
-            <Route exact path="/editcategories" component={EditCategories} />
+            {/* <Route exact path="/editcategories" component={EditCategories} /> */}
             <Route path="/add-category" component={AddCategory} />
             <Route path="/affirmations" component={Affirmations} />
             <Route path="/add-country" component={AddCountry} />

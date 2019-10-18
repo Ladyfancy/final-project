@@ -62,7 +62,7 @@ export default class AddCategory extends Component {
          
           Image:{' '}
           <input
-            type="image"
+            type="file"
             value={this.state.image}
             name="image"
             onChange={this.handleInputChange}
